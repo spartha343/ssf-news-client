@@ -16,11 +16,8 @@ const SignIn = () => {
         const password = form.password.value;
         signInUsingEmail(email, password)
             .then(result => {
-                toast.success('Signed Out Successfully')
+                toast.success('Signed In Successfully');
                 navigate('/');
-            })
-            .then(error => {
-                toast.error(`Error ${error.code}: ${error.message}`);
             })
     }
 
